@@ -1,7 +1,12 @@
+#include <Arduino.h>
+
+// FIXME resolve travis macro problem
+#undef max
+#undef min
+
 #include <WiFiNINA.h> //Required for Arduino MKR 1010 WiFi commnunication.
 #include "fauxmoMKR.h"    //This is the library that creates Amazon Alexa device ids and connects to Alexa.
 //#include "credentials.h"  //This was hard coded below and this #include was removed. It contained the SSID and Password.
-#include <Arduino.h>
 
 #define SERIAL_BAUDRATE                 9600
 #define LED                             LED_BUILTIN  //was 2.
