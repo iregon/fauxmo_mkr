@@ -29,7 +29,14 @@ void setup() {
     fauxmo.enable(true);
 
     fauxmo.onSetState([](unsigned char device_id, const char * device_name, bool state, unsigned char value) {
-        Serial.printf("[MAIN] Device #%d (%s) state: %s value: %d\n", device_id, device_name, state ? "ON" : "OFF", value);
+        Serial.print("[MAIN] Device #");
+        Serial.print(device_id);
+        Serial.print(" ( ");
+        Serial.print(device_name);
+        Serial.print(" ) state: ");
+        Serial.print(state ? "ON" : "OFF");
+        Serial.print(" value: ");
+        Serial.println(value);
     });
 
 }
