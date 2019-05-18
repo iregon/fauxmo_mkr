@@ -40,9 +40,9 @@ void wifiSetup() {
 
   // Connected!
   Serial.print("[WIFI] STATION Mode, SSID: ");
-  Serial.print(WiFi.SSID);
+  Serial.print(WiFi.SSID());
   Serial.print(", IP address: "); 
-  Serial.println(WiFi.localIP);
+  Serial.println(WiFi.localIP());
 }
 
 void callback(unsigned char device_id, const char * device_name, bool state, unsigned char value) {
