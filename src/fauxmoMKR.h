@@ -83,7 +83,7 @@ class fauxmoMKR {
         void onSetState(TSetStateCallback fn) { _setCallback = fn; }
         bool setState(unsigned char id, bool state, unsigned char value);
         bool setState(const char * device_name, bool state, unsigned char value);
-        bool process(AsyncClient *client, bool isGet, String url, String body);
+        //bool process(AsyncClient *client, bool isGet, String url, String body);
         void enable(bool enable);
         void createServer(bool internal) { _internal = internal; }
         void setPort(unsigned long tcp_port) { _tcp_port = tcp_port; }
@@ -91,7 +91,7 @@ class fauxmoMKR {
 
     private:
 
-        AsyncServer * _server;
+        //AsyncServer * _server;
         bool _enabled = true;
         bool _internal = false;
         unsigned int _tcp_port = FAUXMO_TCP_PORT;
