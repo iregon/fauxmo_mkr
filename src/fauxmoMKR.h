@@ -53,6 +53,11 @@ SOFTWARE.
 #endif
 
 #include <Arduino.h>
+
+// TODO fix travis macro problems
+#undef max
+#undef min
+
 #include <WiFiNINA.h>
 #include <WiFiUdp.h>
 #include <functional>
