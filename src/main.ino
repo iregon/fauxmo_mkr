@@ -45,7 +45,7 @@ void wifiSetup() {
   Serial.println(WiFi.localIP);
 }
 
-void callback(unsigned char device_id, const char * device_name, bool state) {
+void callback(unsigned char device_id, const char * device_name, bool state, unsigned char value) {
   Serial.print("[MAIN] Device #");
   Serial.print(device_id);
   Serial.print(" (");
