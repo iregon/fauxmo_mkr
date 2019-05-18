@@ -1,6 +1,6 @@
 #include <Arduino.h>
 
-// FIXME resolve travis macro problem
+// FIXME resolve travis macro problems
 #undef max
 #undef min
 
