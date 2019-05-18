@@ -1,36 +1,7 @@
-//********************************************************************************************
-// 
-// This program is one of two programs that connects the Amazon Alexa using WiFi to a Arduino MKR 1010
-// Development Board (NDB). The NDB uses the coded unique devices to trap unique characters and 
-// TX them to the Arduino Uno for processing. A Voltage Converter is necessary to up-convert the 
-// NDB's 3 volt pinout to the 5 volt Arduino Uno's pin voltage. Depending on the character sent 
-// to the Arduino Uno the EasyVR 3 module will say a verbal Alexa command..."Alexa, Turn Light One On".
-// The device "Light One" is defined when the NDB logs into and connects the local WiFi network and 
-// the Amazon Alexa. A device list can be displayed using the Amazon Alexa phone app. Once a verbal
-// command is given the Alexa WiFi's the command including the device id to the NDB to start 
-// the entire process over.
-//
-// Two (2) programs are required:  Generated_EasyVR_Audio_Sketch.ino and Final_NodeMCU_TX_Sketch.ino
-//
-// Watch my videos on YouTube and search by entering "Scott Mon". Thanks.
-//
-// Notes:
-// Github MQTT libararies for Arduino...
-// 
-// https://github.com/knolleary/pubsubclient
-// 
-// https://github.com/mqtt/mqtt.github.io/wiki/software?id=software
-// ________________________________________________________________________________
-//********************************************************************************************
-//------------------------------------------------------------------------------
-// Say for lights 1-4: ... "Alexa, light 2 off."
-//                         "Alexa, light 2 on."
-//------------------------------------------------------------------------------
-
-#include <Arduino.h>
 #include <WiFiNINA.h> //Required for Arduino MKR 1010 WiFi commnunication.
 #include "fauxmoMKR.h"    //This is the library that creates Amazon Alexa device ids and connects to Alexa.
 //#include "credentials.h"  //This was hard coded below and this #include was removed. It contained the SSID and Password.
+#include <Arduino.h>
 
 #define SERIAL_BAUDRATE                 9600
 #define LED                             LED_BUILTIN  //was 2.
