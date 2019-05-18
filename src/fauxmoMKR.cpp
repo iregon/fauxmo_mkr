@@ -41,7 +41,8 @@ void fauxmoMKR::_sendUDPResponse() {
 	WiFi.macAddress(mac_digits);
     char mac[12];
 	sprintf(mac, "%d%d%d%d%d%d", mac_digits[0], mac_digits[1], mac_digits[2], mac_digits[3], mac_digits[4], mac_digits[5]);
-    mac.toLowerCase();
+    // lowerchase mac address
+	for(int i = 0; i < 12; i++) if(mac[i] >= 65 && mac[i] <= 90) mac[i] = mac[i] + 32;
 
 	char response[strlen(FAUXMO_UDP_RESPONSE_TEMPLATE) + 128];
     snprintf(
@@ -510,7 +511,7 @@ void fauxmoMKR::enable(bool enable) {
 	*/
 
     if (_enabled) {
-
+		/*
 		// Start TCP server if internal
 		if (_internal) {
 			if (NULL == _server) {
@@ -521,7 +522,8 @@ void fauxmoMKR::enable(bool enable) {
 			}
 			_server->begin();
 		}
-
+		*/
+	
 		// UDP setup
 		_udp.beginMulticast(FAUXMO_UDP_MULTICAST_IP, FAUXMO_UDP_MULTICAST_PORT);
         //DEBUG_MSG_FAUXMO("[FAUXMO] UDP server started\n");
