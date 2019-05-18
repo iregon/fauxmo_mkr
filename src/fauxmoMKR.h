@@ -41,7 +41,7 @@ SOFTWARE.
         #define //DEBUG_MSG_FAUXMO(fmt, ...) { DEBUG_FAUXMO.printf(fmt, ## __VA_ARGS__); }
     #endif
 #else
-    #define //DEBUG_MSG_FAUXMO(...)
+    #define DEBUG_MSG_FAUXMO(...)
 #endif
 
 #ifndef DEBUG_FAUXMO_VERBOSE_TCP
