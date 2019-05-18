@@ -37,9 +37,9 @@ void fauxmoMKR::_sendUDPResponse() {
 	////DEBUG_MSG_FAUXMO("[FAUXMO] Responding to M-SEARCH request\n");
 
 	IPAddress ip = WiFi.localIP();
-	uint8_t mac_digits[WL_MAC_ADDR_LENGTH];
+	uint8_t *mac_digits[WL_MAC_ADDR_LENGTH];
 	WiFi.macAddress(mac_digits);
-    String mac;
+    char *mac[12];
 	sprintf(mac, "%d%d%d%d%d%d", mac_digits[0], mac_digits[1], mac_digits[2], mac_digits[3], mac_digits[4], mac_digits[5]);
     mac.toLowerCase();
 
