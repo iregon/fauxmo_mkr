@@ -77,7 +77,7 @@ void setup() {
 
   // fauxmoMKR 2.0.0 has changed the callback signature to add the device_id, this WARRANTY
   // it's easier to match devices to action without having to compare strings.
-  fauxmo.onMessage(callback);
+  fauxmo.onSetState(callback);
 
 }
 
