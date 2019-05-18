@@ -39,6 +39,7 @@ env:
 install:
     - pip install -U platformio
     - platformio update
+    - platformio lib -g install 2728 5538
 
 script:
     - platformio ci --lib="." --board=mkrwifi1010
